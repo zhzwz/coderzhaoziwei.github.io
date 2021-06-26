@@ -1,0 +1,37 @@
+title: Coder Zhao’s Zone
+description: 一语不入意，从君万曲梁尘飞。
+author: Coder Zhao
+
+lang: zh-CN
+
+theme: jekyll-theme-acg
+acg:
+  color: red
+  categories: 分类
+  tags: 标签
+  about: 关于
+  error: 出错了，这个页面已经不存在了。╮(╯▽╰)╭
+  github: coderzhaoziwei
+
+
+exclude: [
+  "LICENSE",
+  "README.md",
+  "package.json",
+]
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:title
