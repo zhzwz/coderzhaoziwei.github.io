@@ -1,18 +1,27 @@
+url: https://coderzhaoziwei.github.io
+baseurl:
 title: Coder Zhao’s Zone
 description: 一语不入意，从君万曲梁尘飞。
 author: Coder Zhao
-
 lang: zh-CN
-
 theme: jekyll-theme-acg
-acg:
-  color: red
-  categories: 分类
-  tags: 标签
-  about: 关于
-  error: 出错了，这个页面已经不存在了。╮(╯▽╰)╭
-  github: coderzhaoziwei
 
+acg:
+  categories:
+    label: 分类
+    description:
+  tags:
+    label: 标签
+    description:
+  about:
+    label: 关于
+    description:
+  friends:
+    label: 友链
+    description:
+  error:
+    label: <span class="text-6xl">404</span>
+    description: 出错了，这个页面已经不存在了。
 
 exclude: [
   "LICENSE",
@@ -21,17 +30,19 @@ exclude: [
 ]
 
 defaults:
-  - scope:
-      path: ""
-    values:
-      layout: page
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-
-collections:
-  posts:
-    output: true
-    permalink: /:collection/:title
+- scope:
+    path: ""
+  values:
+    layout: page
+- scope:
+    path: "index.html"
+  values:
+    layout: page
+    type: home
+- scope:
+    path: ""
+    type: posts
+  values:
+    layout: page
+    permalink: /posts/:title
+    type: post
