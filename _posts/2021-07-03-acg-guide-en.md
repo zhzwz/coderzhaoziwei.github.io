@@ -7,7 +7,7 @@ lang: en-US
 background: https://cdn.jsdelivr.net/gh/coderzhaoziwei/jekyll-theme-acg/assets/images/pixiv78375860.png
 ---
 
-> My English is poor. In the event of any discrepancy, the Simplified Chinese guide shall prevail.
+> My English is poor. In the event of any discrepancy, the Simplified Chinese post shall prevail.
 
 ## Quick start
 
@@ -23,6 +23,13 @@ background: https://cdn.jsdelivr.net/gh/coderzhaoziwei/jekyll-theme-acg/assets/i
 
 - Run `bundle update && bundle exec jekyll serve -o` to build the site and make it available on a local server.
 
+### Automatic deployment
+
+Whenever the `main` branch has a push operation, GitHub Actions will execute the content of the `.github/workflows/deploy.yml` file and publish the content of the site on the `github-pages` branch.
+
+Don't forget to configure the settings of the repository.
+
+![](/assets/images/2021-07-03-settings-pages.png)
 
 ## Global configuration
 

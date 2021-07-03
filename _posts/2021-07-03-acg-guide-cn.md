@@ -2,7 +2,7 @@
 title: Jekyll Theme ACG 主题使用指南
 description: 介绍如何从零开始配置 Jekyll Theme ACG 主题。
 categories: ["Jekyll Theme ACG"]
-tags: ["中文指南"]
+tags: ["guide", "chinese"]
 ---
 
 ## 快速开始
@@ -19,6 +19,13 @@ tags: ["中文指南"]
 
 - 执行命令 `bundle update && bundle exec jekyll serve -o` 开始本地测试
 
+### 自动部署
+
+每当分支 `main` 有 `push` 操作，GitHub Actions 会执行 `.github/workflows/deploy.yml` 文件内容，在分支 `github-pages` 上发布站点内容。
+
+别忘记配置 Github 项目仓库的相关设置，如下图。
+
+![](/assets/images/2021-07-03-settings-pages.png)
 
 ## 全局配置
 
