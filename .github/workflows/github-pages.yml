@@ -5,22 +5,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  Deploy:
+  github-pages:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.7
           bundler-cache: true
-      - name: Install jekyll
-        run: gem install jekyll bundler && bundle exec jekyll --version
-      - name: Build jekyll
-        run: bundle update && bundle exec jekyll build
-      - name: Deploy github-pages
-        uses: crazy-max/ghaction-github-pages@v2
+      - run: bundle exec jekyll build
+      - uses: crazy-max/ghaction-github-pages@v2
         with:
           build_dir: _site
           target_branch: github-pages
