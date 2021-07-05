@@ -2,7 +2,7 @@
 title: Jekyll Theme ACG 主题使用指南
 description: 介绍如何从零开始配置 Jekyll Theme ACG 主题。
 categories: ["Jekyll Theme ACG"]
-tags: ["guide", "chinese"]
+tags: ["guide", "jekyll", "theme"]
 ---
 
 ## 快速开始
@@ -151,6 +151,8 @@ pin:
 ```
 ---
 categories: ["分类一", "分类二", "分类三", "可 以 空 格"] # 分类名中可以使用空格
+
+# 或者
 categories: 分类一 分类二 分类三 # 空格用于隔开，分类名中不能使用空格
 ---
 ```
